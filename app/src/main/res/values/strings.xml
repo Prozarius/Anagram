@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Anagram</string>
+    <string name="choose_lvl">Choose level</string>
+</resources>
