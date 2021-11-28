@@ -1,25 +1,20 @@
 package com.example.rgz;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        if(file.exists())                                                // если файл не существует
+        if(file.exists())
             try {
                 fin =  new FileInputStream(file);
                 byte[] bytes = new byte[fin.available()];
@@ -72,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         l = "" + level.charAt(level.length()-1);
         intent.putExtra(LEVEL, l);
         startActivityForResult(intent, 0);
-        //Toast.makeText(this, l, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -83,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
             int rest = data.getIntExtra(TIME, 0);
             int id = Integer.parseInt(l);
-            //Toast.makeText(this, Integer.toString(id), Toast.LENGTH_SHORT).show();
             id *= 3;
             for(int j = 0; j < 3; j++, id++){
                 if(rest < result[id]){
@@ -118,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
             try{ if(fos!=null) fos.close();}
             catch(IOException ex){ Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();}
         }
-
         super.onStop();
     }
 

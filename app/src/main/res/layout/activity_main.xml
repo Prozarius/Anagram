@@ -10,17 +10,16 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="39dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:text="@string/choose_lvl"
-        android:textSize="40dp"/>
+        android:textSize="30dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical">
@@ -92,6 +91,7 @@
             android:id="@+id/lvl10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
             android:text="Level 10"
             android:onClick="setLevel"/>
 
@@ -102,7 +102,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
         android:text="Leaderboard"
         android:onClick="LeaderBoard"
         />
